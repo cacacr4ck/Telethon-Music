@@ -8,8 +8,8 @@ import aiohttp
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps, ImageChops
 from youtubesearchpython.__future__ import VideosSearch
  
-MUSIC_BOT_NAME = "Telethon Music"
-YOUTUBE_IMG_URL = "https://telegra.ph/file/95d96663b73dbf278f28c.jpg"
+MUSIC_BOT_NAME = "ᴍ4ᴡɪɴɢ x ᴍᴜsɪᴄ"
+YOUTUBE_IMG_URL = "https://telegra.ph/file/c394b9d3247403031589d.png"
 files = [] 
 
 for filename in os.listdir("./thumbnail"): 
@@ -47,7 +47,7 @@ async def gen_thumb(videoid):
                 title = re.sub("\W+", " ", title)
                 title = title.title()
             except:
-                title = "Unsupported Title"
+                title = "Title Capruk"
             try:
                 duration = result["duration"]
             except:
@@ -78,7 +78,7 @@ async def gen_thumb(videoid):
         background = image2.filter(filter=ImageFilter.BoxBlur(30))
         enhancer = ImageEnhance.Brightness(background)
         background = enhancer.enhance(0.6)
-        cir = Image.open(f"thumbnail/IMG_20221129_201846_195.png") 
+        cir = Image.open(f"thumbnail/userbot.jpeg") 
         image3 = changeImageSize(1280, 720, bg)
         circle = changeImageSize(1280, 720, cir)
         image5 = image3.convert("RGBA")
