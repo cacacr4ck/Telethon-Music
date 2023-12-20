@@ -25,8 +25,8 @@ from telethon.tl.functions.users import GetFullUserRequest
 from youtubesearchpython import VideosSearch
 
  
-fotoplay = "https://telegra.ph/file/b6402152be44d90836339.jpg"
-ngantri = "https://telegra.ph/file/b6402152be44d90836339.jpg"
+fotoplay = "https://telegra.ph/file/c394b9d3247403031589d.png"
+ngantri = "https://telegra.ph/file/c394b9d3247403031589d.png"
 from Zaid import call_py, Zaid, client as Client
 owner = "5569440742"
 from Zaid.helpers.yt_dlp import bash
@@ -149,14 +149,14 @@ async def play(event):
         or not replied
         and not title
     ):
-        return await event.client.send_file(chat_id, Config.CMD_IMG, caption="**Give Me Your Query Which You want to Play**\n\n **Example**: `/play Nira Ishq Bass boosted`", buttons=btnn)
+        return await event.client.send_file(chat_id, Config.CMD_IMG, caption="**Masukan judul lagu yang ingin di play**\n\n **Example**: `/play FDM - ANGAN`", buttons=btnn)
     elif replied and not replied.audio and not replied.voice or not replied:
         botman = await event.reply("🔎")
         query = event.text.split(maxsplit=1)[1]
         search = ytsearch(query)
         if search == 0:
             await botman.edit(
-                "**Can't Find Song** Try searching with More Specific Title"
+                "**Lagu tidak ditemukan** Coba cari judul yang lebih spesifik..."
             )     
         else:
             songname = search[0]
@@ -270,7 +270,7 @@ async def vplay(event):
         or not replied
         and not title
     ):
-        return await event.client.send_file(chat_id, Config.CMD_IMG, caption="**Give Me Your Query Which You want to Stream**\n\n **Example**: `/vplay Nira Ishq Bass boosted`", buttons=btnn)
+        return await event.client.send_file(chat_id, Config.CMD_IMG, caption="**Give Me Your Query Which You want to Stream**\n\n **Example**: `/vplay FDM - ANGAN`", buttons=btnn)
     if replied and not replied.video and not replied.document:
         xnxx = await event.reply("**🔄 Processing Query... Please Wait!**")
         query = event.text.split(maxsplit=1)[1]
