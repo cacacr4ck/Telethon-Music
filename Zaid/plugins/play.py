@@ -59,7 +59,7 @@ def ytsearch(query: str):
         songname = data["title"]
         url = data["link"]
         duration = data["duration"]
-        thumbnail = f"https://i.ytimg.com/vi/{data['id']}/hqdefault.jpg"
+        thumbnail = f"https://telegra.ph/file/c394b9d3247403031589d.png"
         videoid = data["id"]
         return [songname, url, duration, thumbnail, videoid]
     except Exception as e:
